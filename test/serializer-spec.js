@@ -47,7 +47,7 @@ describe('Serializer', function(){
 
     encoded.forEach(function(result,i){
       it('should decode sample'+i, function(){
-        Serializer.decode(result).should.be.equal(samples[i]);
+        Serializer.decode(result).should.be.deep.equal(samples[i]);
       });
     });
   });
